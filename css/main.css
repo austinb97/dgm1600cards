@@ -78,9 +78,10 @@ p{
 
 /*POKESTYLE*/
 #container{
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	display: flex;
 	flex-wrap: wrap;
+	align-content: center;
 }
 figure{
 	border: 1px solid #666;
@@ -104,10 +105,11 @@ figcaption{
   background-color: #666;
   display: flex;
 	flex-flow: column;
-	margin: 8px;
+	margin:20px 5%;
 	padding: 5px;
 	height: 100%;
 	box-shadow: 2px 2px 2px black;
+
 }
 .card > *{
 	pointer-events: none;
