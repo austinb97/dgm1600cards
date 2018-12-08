@@ -39,7 +39,7 @@ pokemon.forEach(elm => {
 		var p = document.createElement('p');
 		p.classList.add('stat');
 		p.textContent = stat+": "+statsArray[stat];
-		console.log(p);
+		// console.log(p);
 		statContainer.appendChild(p);
 	}
 	cardBack.appendChild(statContainer);
@@ -49,13 +49,38 @@ pokemon.forEach(elm => {
 });
 
 // FLIP CARDS
-document.getElementById('container').addEventListener("mouseover", function(e) {
+// document.getElementById('container').addEventListener("mouseover", function(e) {
+// 		if(e.target && e.target.matches('.card')){
+// 		  console.log('flip');
+// 		  e.target.classList.toggle('flip');
+// 		}
+// 	});
+
+document.getElementById('container').addEventListener("click", function(e) {
 		if(e.target && e.target.matches('.card')){
 		  console.log('flip');
 		  e.target.classList.toggle('flip');
 		}
 	});
 
+// var flipCardBack = function(){
+// 	this.classList.toggle('flip');
+// 	this.addEventListener("mouseenter", flipCard, true);
+// }
+
+// var flipCard = function(){
+// 	console.log('flip');
+// 	this.classList.toggle('flip');
+// 	setTimeout(3000);
+// 	// this.removeEventListener("mouseenter", flipCard, true);
+// 	this.addEventListener("mouseleave", flipCardBack, true);
+// }
+
+// var card = document.querySelectorAll('.card');
+// for(var i = 0; i<card.length; i++){
+// card[i].addEventListener("mouseenter", flipCard, true);
+// card[i].addEventListener("mouseleave", flipCardBack, true);
+// }
 
 // ADD CARD FUNCTIONALITY
 let btn = document.getElementById('addCardBtn').addEventListener("click", function(){
@@ -93,7 +118,7 @@ let btn = document.getElementById('addCardBtn').addEventListener("click", functi
 		var p = document.createElement('p');
 		p.classList.add('stat');
 		p.textContent = stat+": "+statsArray[stat];
-		console.log(p);
+		// console.log(p);
 		statContainer.appendChild(p);
 	}
 	cardBack.appendChild(statContainer);
